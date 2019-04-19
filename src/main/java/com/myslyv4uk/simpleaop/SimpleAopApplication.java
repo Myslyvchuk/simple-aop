@@ -1,0 +1,13 @@
+package com.myslyv4uk.simpleaop;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SimpleAopApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SimpleAopApplication.class, args);
+	}
+
+}
