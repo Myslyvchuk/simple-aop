@@ -16,7 +16,7 @@ public class SayService {
     System.out.println("Bye");
   }
 
-  public String retrunSmthn(LocalDateTime localDateTime){
+  public String returnSmthn(LocalDateTime localDateTime){
     return "Hi Bye" +  localDateTime;
   }
 }

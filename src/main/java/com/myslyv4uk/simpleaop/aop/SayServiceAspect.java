@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -24,6 +25,13 @@ public class SayServiceAspect {
   public void after(JoinPoint joinPoint) {
     System.out.print("After ");
     System.out.println(joinPoint.getSignature().getName());
+  }
+
+  @AfterReturning(pointcut = "execution(* com.myslyv4uk.simpleaop.service.SayService.*(..))", returning = "result")
+  public void afterReturning(JoinPoint joinPoint, Object result){
+    System.out.print("After returning ");
+    System.out.print(joinPoint.getSignature().getName());
+    System.out.println(" result is " + result);
   }
 
 }

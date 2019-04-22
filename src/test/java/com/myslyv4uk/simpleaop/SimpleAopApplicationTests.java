@@ -25,7 +25,7 @@ public class SimpleAopApplicationTests {
 	public void testSay(){
 		sayService.sayHi();
 		sayService.sayBye();
-		sayService.retrunSmthn(LocalDateTime.now());
+		sayService.returnSmthn(LocalDateTime.now());
 	}
 
 }
